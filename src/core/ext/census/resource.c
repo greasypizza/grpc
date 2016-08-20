@@ -32,7 +32,7 @@
  */
 
 #include "src/core/ext/census/resource.h"
-#include "nanopb/pb_decode.h"
+#include "pb_decode.h"
 
 #include <grpc/census.h>
 #include <grpc/support/alloc.h>
