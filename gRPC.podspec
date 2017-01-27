@@ -30,7 +30,7 @@
 
 Pod::Spec.new do |s|
   s.name     = 'gRPC'
-  version = '1.0.0-pre1'
+  version = '1.0.2'
   s.version  = version
   s.summary  = 'gRPC client library for iOS/OSX'
   s.homepage = 'http://www.grpc.io'
@@ -59,4 +59,9 @@ Pod::Spec.new do |s|
 
   # Certificates, to be able to establish TLS connections:
   s.resource_bundles = { 'gRPCCertificates' => ['etc/roots.pem'] }
+
+  s.pod_target_xcconfig = {
+    # This is needed by all pods that depend on gRPC-RxLibrary:
+    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+  }
 end
