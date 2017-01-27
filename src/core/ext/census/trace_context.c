@@ -37,8 +37,8 @@
 #include <grpc/support/log.h>
 #include <stdbool.h>
 
-#include "third_party/nanopb/pb_decode.h"
-#include "third_party/nanopb/pb_encode.h"
+#include "pb_decode.h"
+#include "pb_encode.h"
 
 // This function assumes the TraceContext is valid.
 size_t encode_trace_context(google_trace_TraceContext *ctxt, uint8_t *buffer,
